@@ -1,0 +1,40 @@
+- hosts: localhost
+  vars:
+    source_key: "./.ssh/id_rsa"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    personal: "{{ lookup('env', 'HOME') }}/personal"
+  become: true
+  tasks:
+    - include: tasks/node-setup.yml
+  # - name: Install zsh
+  #   tags: zsh
+  #   package: 
+  #     name: zsh 
+  #     state: present
+  # - name: Change shell
+  #   tags: zsh
+  #   shell: chsh -s `which zsh`
+  # - name: Install ohmyzsh
+  #   tags: zsh
+  #   shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  # - name: Install zsh plugin
+  #   tags: zsh
+  #   ansible.builtin.git:
+  #     repo: https://github.com/zsh-users/zsh-autosuggestions.git
+  #     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+  # - name: Update zshrc
+  #   tags: zsh
+  #   shell: sed -i 's/(git/(git zsh-autosuggestions/' ~/.zshrc
+  # - name: Install node
+  #   tags: node
+  #   package: 
+  #     name: ['nodejs', 'npm'] 
+  #     state: present
+  # - name: Install n (node version manager)
+  #   tags: node
+  #   npm: 
+  #     name: n
+  #     global: yes
+  # - name: Install node 16
+  #   tags: node
+  #   shell: n 16
