@@ -29,17 +29,9 @@
   - install
   - node
   - npm-path
-
-- name: Install N
-  npm:
-    name: n
-    global: yes
-  tags:
-    - install
+- name: Install yarn
+  tags: 
     - node
-
-- name: Install correct version of Node
-  shell: n 14
-  tags:
-    - install
-    - node
+  package:
+    name: yarn
+    state: present
