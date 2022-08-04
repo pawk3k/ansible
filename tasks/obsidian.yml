@@ -1,6 +1,16 @@
-- name: Install obsidian
+# - name: Install obsidian
+#   tags:
+#     - obsidian
+#   package: 
+#     name: obsidian 
+#     state: present
+- name: Cloning knowledge base
+  ansible.builtin.git:
+    repo: 'git@github.com:pawk3k/knowledgeBase.git'
+    dest: "{{ lookup('env', 'HOME') }}/int/knowledgeBase"
+    recursive: yes
+    update: yes
+    accept_hostkey: yes
+    version: master
   tags:
     - obsidian
-  package: 
-    name: obsidian 
-    state: present

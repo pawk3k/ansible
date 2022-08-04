@@ -3,9 +3,12 @@
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
-  become: true
   tasks:
     - include: tasks/node-setup.yml
+    - include: tasks/ssh.yml
+    - include: tasks/zsh.yml
+    - include: tasks/git-setup.yml
+    - include: tasks/obsidian.yml
   # - name: Install zsh
   #   tags: zsh
   #   package: 
