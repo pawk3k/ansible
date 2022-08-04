@@ -1,0 +1,35 @@
+- name: Install pkg-config
+  tags: m1-a
+  package: 
+    name: pkg-config  
+    state: present
+- name: Install cairo
+  tags: m1-a
+  package: 
+    name: cairo
+    state: present
+- name: Install pango
+  tags: m1-a
+  package: 
+    name: pango
+    state: present
+- name: Install libpng
+  tags: m1-a
+  package: 
+    name: libpng
+    state: present
+- name: Install jpeg
+  tags: m1-a
+  package: 
+    name: jpeg
+    state: present
+- name: Install giflib
+  tags: m1-a
+  package: 
+    name: giflib
+    state: present
+- name: Install librsvg
+  tags: m1-a
+  package: 
+    name: librsvg
+    state: present
