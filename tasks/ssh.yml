@@ -22,6 +22,14 @@
   tags:
     - install
     - ssh
+- name: Install ssh config
+  copy:
+    src: "./.ssh/config"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/config"
+    mode: 0644
+  tags:
+    - install
+    - ssh
 - name: Set authorized key took from file
   authorized_key:
     user: "{{ lookup('env', 'USER') }}"

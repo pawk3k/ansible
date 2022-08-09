@@ -7,7 +7,7 @@
 - name: Cloning knowledge base
   ansible.builtin.git:
     repo: 'git@github.com:pawk3k/knowledgeBase.git'
-    dest: "{{ lookup('env', 'HOME') }}/int/knowledgeBase"
+    dest: "{{ lookup('env', 'HOME') }}/int/ssh/knowledgeBase"
     recursive: yes
     update: yes
     accept_hostkey: yes
