@@ -1,5 +1,13 @@
 - name: Installing stow
   package:
+    name: stow
+    state: present
+  tags:
+    - install
+    - dotfiles
+    - stow
+- name: Installing neovim
+  package:
     name: neovim
     state: present
   tags:
