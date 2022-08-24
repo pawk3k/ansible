@@ -10,5 +10,5 @@
     - include: tasks/git-setup.yml
     - include: tasks/obsidian.yml
     - include: tasks/m1.yml
-    - include: tasks/nvim.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/nvim-setup.yml
