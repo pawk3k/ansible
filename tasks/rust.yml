@@ -1,0 +1,7 @@
+- name: Install rust
+  package:
+    name: rust
+    state: present
+  tags:
+    - install
+    - rust

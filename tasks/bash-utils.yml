@@ -1,5 +1,5 @@
 - name: Install fuzzy finder
-  tags: bash-utils
-  package: 
+  tags: bash
+  package:
     name: fzf
     state: present
