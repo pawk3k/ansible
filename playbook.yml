@@ -7,4 +7,5 @@
     - include_tasks: "{{ item }}"
       with_fileglob:
         - tasks/*.yml
+      # always is a special word that will preserve the tags from the included tasks
       tags: always
